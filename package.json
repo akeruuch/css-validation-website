@@ -1,0 +1,17 @@
+{
+  "name": "css-validation-website",
+  "version": "1.0.0",
+  "description": "Lecture 52: Stylelint CSS validation",
+  "scripts": {
+    "lint:css": "stylelint \"**/*.css\""
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "devDependencies": {
+    "stylelint": "^18.1.0"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
