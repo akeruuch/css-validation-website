@@ -22,7 +22,7 @@ npm run lint:css
 
 Две последние команды эквивалентны. Успех — код 0, обычная проверка может ничего не напечатать. Для подробного списка: `npx stylelint "**/*.css" --formatter verbose`.
 
-На этом компьютере также можно выполнить `powershell -ExecutionPolicy Bypass -File .\check-css.ps1`: скрипт использует уже установленный Stylelint и доступный Node.js; глобальные настройки PowerShell не меняются. В Codex npm отсутствовал, поэтому использована официальная копия npm из registry.npmjs.org в рабочей папке work/tooling52/npm; зависимости установлены командами npm init, npm install и проверены npm ci. В GitHub npm предоставляет setup-node.
+На этом компьютере также можно выполнить `.\check-css.cmd`: скрипт использует уже установленный Stylelint и доступный Node.js. В Codex npm отсутствовал, поэтому использована официальная копия npm из registry.npmjs.org в рабочей папке work/tooling52/npm; зависимости установлены командами npm init, npm install и проверены npm ci. В GitHub npm предоставляет setup-node.
 
 ## Повторить эксперимент
 
