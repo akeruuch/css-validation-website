@@ -636,3 +636,8 @@ button,a,input,textarea,summary {
 .site-footer {
   padding-top:25px;
 }
+
+/* Intentional lecture 52 error */
+body {
+  colr: blue;
+}
