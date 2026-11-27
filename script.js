@@ -52,3 +52,6 @@ if (calculatorForm) {
     delete output.dataset.state;
   });
 }
+
+// Intentional lecture 53 error
+console.log(undefinedLecture53);
