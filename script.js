@@ -20,6 +20,3 @@ document.getElementById("clear").addEventListener("click", function () {
   second.value = "";
   result.textContent = "Здесь будет результат";
 });
-
-// Intentional lecture 53 error
-console.log(undefinedLecture53);
