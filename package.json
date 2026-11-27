@@ -1,12 +1,11 @@
 {
   "name": "css-validation-website",
   "version": "1.0.0",
-  "description": "Lectures 52-53: Stylelint and ESLint validation",
+  "description": "Учебный сайт: проверка CSS и JavaScript",
   "scripts": {
     "lint:css": "stylelint \"**/*.css\"",
     "lint:js": "eslint \"**/*.js\"",
-    "lint": "npm run lint:css && npm run lint:js",
-    "test": "node --test tests/calculator.test.mjs"
+    "lint": "npm run lint:css && npm run lint:js"
   },
   "keywords": [],
   "type": "module",

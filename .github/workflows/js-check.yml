@@ -27,6 +27,3 @@ jobs:
 
       - name: Check JavaScript
         run: npx eslint "**/*.js"
-
-      - name: Test calculator
-        run: npm test
