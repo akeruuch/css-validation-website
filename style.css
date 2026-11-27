@@ -636,3 +636,9 @@ button,a,input,textarea,summary {
 .site-footer {
   padding-top:25px;
 }
+
+.calculator-panel { background: white; padding: 32px; border: 1px solid var(--line); border-radius: 4px; }
+.calculator-panel label { display: block; font-weight: 600; margin-bottom: 8px; }
+.calculator-panel input, .calculator-panel select { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid var(--line); border-radius: 3px; background: var(--paper); color: var(--ink); }
+#calculator-result { margin-top: 24px; margin-bottom: 0; font-weight: 600; min-height: 3.3em; }
+#calculator-result[data-state="error"] { color: #a52c16; }

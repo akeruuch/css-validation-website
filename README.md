@@ -39,3 +39,28 @@ git push origin main
 ## Ограничения
 
 Три правила проверяют неверный HEX, повтор свойств внутри блока и неизвестные свойства. Они не гарантируют корректность всех CSS-значений, форматирования, адаптивности и внешнего вида. Страницу нужно дополнительно открыть в браузере. Публикация сайта в этом задании не настраивается.
+
+
+## Продолжение — лекция 53
+
+В том же репозитории добавлен ESLint 10 и JavaScript Validation. Stylelint и CSS Validation сохранены. Повторная инициализация npm не нужна: package.json уже существует.
+
+Файлы: eslint.config.js — flat config; calculator.js — четыре операции и разбор чисел; script.js — подключение формы, меню и фильтров; tests/calculator.test.mjs — семь тестов. В package.json установлен type: module; script.js подключён как модуль, document и console объявлены в конфигурации readonly-глобальными.
+
+На этом компьютере из корня проекта:
+
+`powershell
+.\check-js.cmd
+.\check-css.cmd
+.\start-site.cmd
+`
+
+После запуска сервера откройте http://127.0.0.1:8153/#calculator. Для остановки нажмите Ctrl+C в терминале сервера. Если порт уже занят этим предпросмотром, просто откройте адрес. Модулям нужен HTTP-сервер; не открывайте index.html двойным щелчком. Docker не требуется.
+
+При доступном npm: npm ci, npm run lint:js, npm run lint:css, npm test. Команда npm run lint запускает обе проверки.
+
+Правила: no-undef=error, no-unused-vars=warn, no-console=off. Предупреждение не делает обычную проверку неуспешной; для строгого режима можно добавить --max-warnings 0. Ошибка lint даёт код 1.
+
+GitHub → Actions → JavaScript Validation → js-check → Check JavaScript. После успешного lint дополнительно запускается Test calculator. Для эксперимента добавьте console.log(undefinedLecture53); в script.js, выполните commit и push, затем удалите строку и повторите commit/push. Последняя версия должна проходить проверку. CSS Validation работает отдельным workflow.
+
+Ответы на вопросы лекции 53 находятся в ANSWERS53.md.

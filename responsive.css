@@ -159,3 +159,7 @@
     transition:none!important;
   }
 }
+
+@media (max-width: 760px) {
+  .calculator-panel { padding: 24px 20px; }
+}

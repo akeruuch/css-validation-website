@@ -1,4 +1,5 @@
 "use strict";
+import { calculate, parseNumber } from './calculator.js';
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector("#main-nav");
 if (toggle && nav) {
@@ -29,3 +30,25 @@ document.querySelectorAll("[data-filter]").forEach((button) => {
   });
 });
 document.querySelector("#year").textContent = String(new Date().getFullYear());
+
+const calculatorForm = document.querySelector('#calculator-form');
+if (calculatorForm) {
+  const output = document.querySelector('#calculator-result');
+  calculatorForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    try {
+      const first = parseNumber(calculatorForm.elements.first.value);
+      const second = parseNumber(calculatorForm.elements.second.value);
+      const result = calculate(first, second, calculatorForm.elements.operation.value);
+      output.textContent = `Результат: ${new Intl.NumberFormat('ru-RU', { maximumSignificantDigits: 12 }).format(result)}`;
+      output.dataset.state = 'success';
+    } catch (error) {
+      output.textContent = error.message;
+      output.dataset.state = 'error';
+    }
+  });
+  calculatorForm.addEventListener('reset', () => {
+    output.textContent = 'Введите два числа и выберите операцию.';
+    delete output.dataset.state;
+  });
+}
